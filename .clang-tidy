@@ -1,0 +1,28 @@
+Checks: "-*,clang-analyzer-*"
+ColumnLimit: 120
+HeaderFilterRegex: ".*"
+FormatStyle: file
+DeriveLineEnding: false
+IndentWidth: 2
+TabWidth: 2
+UseTab: Always
+SpacesBeforeTrailingComments: 1
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SpacesInAngles: false
+BreakBeforeBraces: Allman
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+  AfterUnion: true
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+  AfterLambda: true
