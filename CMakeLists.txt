@@ -6,16 +6,13 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/build)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
-<<<<<<< HEAD
-=======
 set(CMAKE_BUILD_TYPE Release)
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
 endif()
 
->>>>>>> ca595e1 (Day 1)
-set(executables d1)
+set(executables d1 d2)
 
 foreach(executable ${executables})
     add_executable(${executable} "${executable}/main.cxx")
