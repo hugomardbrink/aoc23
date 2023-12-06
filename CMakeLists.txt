@@ -12,7 +12,7 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
 endif()
 
-set(executables d1 d2 d3)
+set(executables d1 d2 d3 d4)
 
 foreach(executable ${executables})
     add_executable(${executable} "${executable}/main.cxx")
