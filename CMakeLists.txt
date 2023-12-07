@@ -12,10 +12,15 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
 endif()
 
-set(executables d1 d2 d3 d4)
+include_directories("/usr/local/include" "/opt/homebrew/opt/llvm/include")
+link_directories("/usr/local/lib" "/opt/homebrew/opt/llvm/lib")
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS} -fopenmp")
+
+set(executables d1 d2 d3 d4 d5)
 
 foreach(executable ${executables})
-    add_executable(${executable} "${executable}/main.cxx")
+    add_executable(${executable} "${executable}/main.cxx") 
 endforeach()
 
 set(CMAKE_CXX_CLANG_TIDY
